@@ -1,0 +1,120 @@
+#app {
+  padding: 44px 68px;
+}
+
+.cv {
+  border: 1px dashed black;
+  width: 595px;
+  height: 842px;
+  padding: 15px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .top {
+    height: 124px;
+
+    display: flex;
+    gap: 20px;
+
+    > div {
+      background-color: var(--bg-secondary);
+      padding: 12px;
+
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+    }
+    
+    .logo {
+      width: 124px;
+      background-image: url('/baseLogo.png');
+      background-size: contain;
+
+    }
+
+    .bio {
+      width: 124px;
+      padding: 12px;
+
+      .heading {
+        font-size: 10px;
+        margin-bottom: 46px;
+      }
+
+      .name {
+        font-size: 14px;
+      }
+
+      .job {
+        font-size: 12px;
+        color: #5c5c5c;
+      }
+    }
+
+    .langs {
+      width: 267px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      h2 {
+        font-size: 14px;
+      }
+
+      .wrapper {
+        display: flex;
+        gap: 17px;
+
+        .langs-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+  
+          [class^="lang-"] {  
+            [class^="lang-name-"] {
+              font-size: 10px;
+              line-height: 105%;
+            }
+          }
+        }
+
+        .bar-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          [class^="progress-bar-"] {
+            width: 100%;
+            height: 11px;
+
+            div {
+              height: 100%;
+              width: var(--level);
+              background-color: var(--bg-highlight);
+
+              border-radius: 3px;
+              -webkit-border-radius: 3px;
+              -moz-border-radius: 3px;
+              -ms-border-radius: 3px;
+              -o-border-radius: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .middle {
+    height: 359px;
+  }
+
+  .bottom {
+    height: 289px;
+  }
+}
