@@ -42,11 +42,12 @@
 
       .heading {
         font-size: 10px;
-        margin-bottom: 46px;
+        margin-bottom: 40px;
       }
 
       .name {
         font-size: 14px;
+        margin-bottom: 6px;
       }
 
       .job {
@@ -112,9 +113,418 @@
 
   .middle {
     height: 359px;
+
+    display: flex;
+    justify-content: space-between;
+
+    .experience {
+      width: 411px;
+      height: 359px;
+      padding: 12px;
+      background-color: var(--bg-secondary);
+
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+
+      h3 {
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      .jobs-container {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .job {
+          padding: 10px 8px;
+          background-color: var(--bg-primary);
+
+          border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
+
+          [class^="date-"] {
+            font-size: 8px;
+            margin-bottom: 8px;
+            line-height: 150%;
+          }
+
+          .info {
+            display: flex;
+            justify-content: space-between;
+
+            .heading {
+              [class^="title-"] {
+                font-size: 10px;
+                line-height: 15px;
+              }
+              
+              [class^="type-"] {
+                font-size: 8px;
+                line-height: 12px;
+              }
+            }
+
+            .responsibilities {
+              width: 239px;
+              font-size: 8px;
+
+              li {
+                list-style: none;
+                position: relative;
+                margin-left: 12px;
+              }
+
+              li::before {
+                position: absolute;
+                display: block;
+                content: '';
+                background-color: #000000;
+                width: 2px;
+                height: 2px;
+                top: 5px;
+                left: -8px;
+
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+              }
+            }
+          }
+        }
+
+        .job:first-child {
+          background-color: var(--bg-highlight);
+          color: var(--bg-primary);
+          position: relative;
+
+          li::before {
+            background-color: #ffffff !important;
+          }
+        }
+
+        .job:first-child::before {
+          content: "most recent";
+          padding: 2px 6px;
+          font-family: "Poppins" sans-serif;
+          font-weight: 500;
+          font-size: 8px;
+          position: absolute;
+          right: 8px;
+          top: 8px;
+          color: #DDF163;
+          background-color: #7E731266;
+          border-radius: 59px;
+          -webkit-border-radius: 59px;
+          -moz-border-radius: 59px;
+          -ms-border-radius: 59px;
+          -o-border-radius: 59px;
+}
+      }
+    }
+
+    .tools {
+      background-color: var(--bg-secondary);
+      width: 124px;
+      padding: 12px 12px 0 12px;
+
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+
+      h4 {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 21px;
+      }
+
+      .tool-blocks {
+        padding: 0px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .tool-block {
+          background-color: var(--bg-primary);
+          padding: 16px 11px;
+          position: relative;
+
+          border-radius: 6px;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -ms-border-radius: 6px;
+          -o-border-radius: 6px;
+
+          [class^="tool-header-"] {
+            padding: 2px 6px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            background-color: #000000;
+            font-size: 5px;
+            text-align: center;
+            white-space: nowrap;
+
+            border-radius: 59px;
+            -webkit-border-radius: 59px;
+            -moz-border-radius: 59px;
+            -ms-border-radius: 59px;
+            -o-border-radius: 59px;
+
+            position: absolute;
+            top: -5.5px;
+            left: 50%;
+
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+          } 
+
+          .icons-container {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 16px;
+            row-gap: 16px;
+            justify-content: center;             
+
+            .tool-icon {
+              width: 15px;
+              height: 15px;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
   }
 
   .bottom {
     height: 289px;
+
+    display: flex;
+    justify-content: space-between;
+
+    .education {
+      width: 268px;
+      height: 100%;
+      padding: 12px 8px 12px 12px;
+      background-color: var(--bg-secondary);
+
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+
+      h4 {
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+
+      .education-cards {
+        height: 228px;
+        display: flex;
+        column-gap: 16px;
+        align-content: space-between;
+        flex-wrap: wrap;
+        
+        .education-card {
+          position: relative;
+          background-color: var(--bg-primary);
+          width: 116px;
+          height: fit-content;
+          padding: 8px;
+
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+
+          transition: .2s;
+          -webkit-transition: .2s;
+          -moz-transition: .2s;
+          -ms-transition: .2s;
+          -o-transition: .2s;
+
+          .education-date {
+            font-size: 10px;
+            line-height: 15px;
+          }
+
+          .education-title {
+            h5 {
+              font-size: 10px;
+            }
+
+            .hashtags {
+              color: #149063;
+              font-size: 8px;
+            }
+          }
+
+          .school {
+            font-size: 8px;
+          }
+
+          .favorite-button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            width: 11px;
+            height: 9.39px;
+            position: absolute;
+            top: 10.81px;
+            right: 8px;
+            transition: .5s;
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -ms-transition: .5s;
+            -o-transition: .5s;
+          }
+
+          .favorite-button:hover {
+            transform: scaleX(1.5) scaleY(1.5) !important;
+            -webkit-transform: scaleX(1.5) scaleY(1.5) !important;
+            -moz-transform: scaleX(1.5) scaleY(1.5) !important;
+            -ms-transform: scaleX(1.5) scaleY(1.5) !important;
+            -o-transform: scaleX(1.5) scaleY(1.5) !important;
+          }
+        }
+
+        .education-card:hover:not(.favorite) {
+          background-color: #28D979;
+          color: #ffffff;
+
+          .hashtags {
+            color: #ffffff;
+          }
+
+          .favorite-button {
+            background-image: url('/heart.svg');
+            transform: scaleX(1.5) scaleY(1.5) !important;
+            -webkit-transform: scaleX(1.5) scaleY(1.5) !important;
+            -moz-transform: scaleX(1.5) scaleY(1.5) !important;
+            -ms-transform: scaleX(1.5) scaleY(1.5) !important;
+            -o-transform: scaleX(1.5) scaleY(1.5) !important;
+          }
+        }
+
+        .education-card.favorite {
+          background-color: #28D979;
+          color: #ffffff;
+
+          .hashtags {
+            color: #ffffff;
+          }
+
+          .favorite-button {
+            background-image: url('/heart.svg');
+          }
+        }
+
+        .education-card.favorite:hover {
+          background-color: #ffffff;
+          color: #000000;
+
+          .hashtags {
+            color: #149063;
+          }
+
+          .favorite-button {
+            background-image: url('/heart_green.svg');
+            transform: scaleX(0.85) scaleY(0.85);
+            -webkit-transform: scaleX(0.85) scaleY(0.85);
+            -moz-transform: scaleX(0.85) scaleY(0.85);
+            -ms-transform: scaleX(0.85) scaleY(0.85);
+            -o-transform: scaleX(0.85) scaleY(0.85);
+          }
+        }
+      }
+
+    }
+
+    .right-block {
+      width: 267px;
+
+
+      .interests {
+        margin-bottom: 20px;
+        background-color: var(--bg-secondary);
+        padding: 12px;
+
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+
+        h4 {
+          font-size: 14px;
+          margin-bottom: 14px;
+        }
+
+        .interests-container {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+
+          span {
+            padding: 4px 10px;
+            font-weight: 400;
+            font-size: 10px;
+            background-color: var(--bg-primary);
+
+            border-radius: 40px;
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            -ms-border-radius: 40px;
+            -o-border-radius: 40px;
+          }
+        }
+      }
+
+      .contacts {
+        background: #000000;
+        color: #ffffff;
+        padding: 12px;
+
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+
+        .contact-heading {
+          margin-bottom: 11px;
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .gmail {
+          font-size: 10px;
+          font-weight: 200;
+        }
+      }
+    }
   }
 }
