@@ -11,7 +11,7 @@ html {
   --bg-highlight: #28d979;
 }
 
-html, body, #app {
+html, body, .app {
   height: 100%;
 }
 

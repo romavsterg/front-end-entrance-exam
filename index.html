@@ -12,37 +12,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app">
+    <div class="popup">
+      <div class="avatar-popup">
+        <h2>Выберите свой аватар</h2>
+        <label for="avatar-input">Выбрать файл</label>
+        <input id="avatar-input" type="file"/>
+      </div>
+      <div class="name-popup">
+        <h2>Введите имя</h2>
+        <input id="name-input" required type="text">
+        <button disabled id="save-name" class="disabled">&check;</button>
+      </div>
+    </div>
+    <div class="app">
       <div class="cv">
         <div class="top">
-          <div class="logo"></div>
+          <div id="avatar" class="avatar"></div>
           <div class="bio">
-            <p class="heading poppins-medium">Hello 👋🏻 I’m</p>
-            <h1 class="name poppins-semibold">Karthik SR</h1>
+            <p id="bio-heading" class="heading poppins-medium">Hello 👋🏻 I’m</p>
+            <h1 class="name poppins-semibold" id="name">Karthik SR</h1>
             <p class="job poppins-medium">UX/UI Designer</p>
           </div>
           <div class="langs">
             <h2 class="poppins-medium">Languages</h2>
             <div class="wrapper">
               <div class="langs-container">
-                <div class="lang-1">
-                  <p class="lang-name-1 poppins-medium">English</p>
+                <div class="lang">
+                  <p class="lang-name poppins-medium">English</p>
                 </div>
-                <div class="lang-2">
-                  <p class="lang-name-2 poppins-medium">Malayalam</p>
+                <div class="lang">
+                  <p class="lang-name poppins-medium">Malayalam</p>
                 </div>
-                <div class="lang-3">
-                  <p class="lang-name-3 poppins-medium">Hindi</p>
+                <div class="lang">
+                  <p class="lang-name poppins-medium">Hindi</p>
                 </div>
               </div>
               <div class="bar-container">
-                <div class="progress-bar-1">
+                <div class="progress-bar">
                   <div style="--level: 100%"></div>
                 </div>
-                <div class="progress-bar-2">
+                <div class="progress-bar">
                   <div style="--level: 100%"></div>
                 </div>
-                <div class="progress-bar-3">
+                <div class="progress-bar">
                   <div style="--level: 80%"></div>
                 </div>
               </div>
@@ -54,11 +66,11 @@
             <h3 class="poppins-medium">Experience</h3>
             <div class="jobs-container">
               <div class="job">
-                <div class="date-1 poppins-medium">Jun. 2023 - Present</div>
+                <div class="date poppins-medium">Jun. 2023 - Present</div>
                 <div class="info">
                   <div class="heading">
-                    <div class="title-1 poppins-medium">Marketing Manager</div>
-                    <div class="type-1 poppins-regular">Pankayam | Full-time</div>
+                    <div class="title poppins-medium">Marketing Manager</div>
+                    <div class="type poppins-regular">Pankayam | Full-time</div>
                   </div>
                   <div class="responsibilities poppins-regular">
                     <ul>
@@ -69,11 +81,11 @@
                 </div>
               </div>
               <div class="job">
-                <div class="date-2 poppins-medium">2017 - Present</div>
+                <div class="date poppins-medium">2017 - Present</div>
                 <div class="info">
                   <div class="heading">
-                    <div class="title-2 poppins-medium">Graphic / Web designer</div>
-                    <div class="type-1 poppins-regular">Freelance</div>
+                    <div class="title poppins-medium">Graphic / Web designer</div>
+                    <div class="type poppins-regular">Freelance</div>
                   </div>
                   <div class="responsibilities poppins-regular">
                     <ul>
@@ -85,11 +97,11 @@
                 </div>
               </div>
               <div class="job">
-                <div class="date-3 poppins-medium">Sep. 2021 - Jun. 2023</div>
+                <div class="date poppins-medium">Sep. 2021 - Jun. 2023</div>
                 <div class="info">
                   <div class="heading">
-                    <div class="title-3 poppins-medium">Legal Assistant</div>
-                    <div class="type-1 poppins-regular">Law Firm |  Intern</div>
+                    <div class="title poppins-medium">Legal Assistant</div>
+                    <div class="type poppins-regular">Law Firm |  Intern</div>
                   </div>
                   <div class="responsibilities poppins-regular">
                     <ul>
@@ -106,7 +118,7 @@
             <h4 class="poppins-medium">Tools</h4>
             <div class="tool-blocks">
               <div class="tool-block">
-                <p class="tool-header-1 poppins-medium">design</p>
+                <p class="tool-header poppins-medium">design</p>
                 <div class="icons-container">
                   <div class="tool-icon"></div>
                   <div class="tool-icon"></div>
@@ -117,7 +129,7 @@
                 </div>
               </div>
               <div class="tool-block">
-                <p class="tool-header-2 poppins-medium">no-code</p>
+                <p class="tool-header poppins-medium">no-code</p>
                 <div class="icons-container">
                   <div class="tool-icon"></div>
                   <div class="tool-icon"></div>
@@ -126,7 +138,7 @@
                 </div>
               </div>
               <div class="tool-block">
-                <p class="tool-header-3 poppins-medium">artificial intelligence</p>
+                <p class="tool-header poppins-medium">artificial intelligence</p>
                 <div class="icons-container">
                   <div class="tool-icon"></div>
                   <div class="tool-icon"></div>
