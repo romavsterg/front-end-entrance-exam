@@ -19,43 +19,61 @@
         <input id="avatar-input" type="file"/>
       </div>
       <div class="name-popup">
-        <h2>Введите имя</h2>
-        <input id="name-input" required type="text">
+        <input placeholder="Введите имя" id="name-input" type="text">
         <button disabled id="save-name" class="disabled">&check;</button>
+      </div>
+      <div class="job-popup">
+        <input placeholder="Введите должность" id="job-input" type="text">
+        <button disabled id="save-job" class="disabled">&check;</button>
+      </div>
+      <div class="bio-heading-popup">
+        <input placeholder="Произвольный текст" id="bio-heading-input" type="text">
+        <button disabled id="save-bio-heading" class="disabled">&check;</button>
+      </div>
+      <div class="lang-popup">
+        <input placeholder="Название языка" id="lang-input" type="text">
+        <button disabled id="save-lang" class="disabled">&check;</button>
+      </div>
+      <div class="lang-progress-popup">
+        <p>Уровень Владения языком(от 1 до 10)</p>
+        <div>
+          <input type="range" min="0" max="10" id="lang-progress-input">
+          <button disabled id="save-lang-progress" class="disabled">&check;</button>
+        </div>
       </div>
     </div>
     <div class="app">
       <div class="cv">
         <div class="top">
-          <div id="avatar" class="avatar"></div>
+          <div id="avatar" data-id="avatar" class="avatar"></div>
           <div class="bio">
-            <p id="bio-heading" class="heading poppins-medium">Hello 👋🏻 I’m</p>
-            <h1 class="name poppins-semibold" id="name">Karthik SR</h1>
-            <p class="job poppins-medium">UX/UI Designer</p>
+            <p id="bio-heading" data-id="bio-heading" class="heading poppins-medium">Hello 👋🏻 I’m</p>
+            <h1 id="name" data-id="name" class="name poppins-semibold">Karthik SR</h1>
+            <p id="job" data-id="job" class="job poppins-medium">UX/UI Designer</p>
           </div>
           <div class="langs">
             <h2 class="poppins-medium">Languages</h2>
             <div class="wrapper">
               <div class="langs-container">
                 <div class="lang">
-                  <p class="lang-name poppins-medium">English</p>
+                  <p id="lang" data-id="lang-1" class="lang-name poppins-medium">English</p>
                 </div>
                 <div class="lang">
-                  <p class="lang-name poppins-medium">Malayalam</p>
+                  <p id="lang" data-id="lang-2" class="lang-name poppins-medium">Malayalam</p>
                 </div>
                 <div class="lang">
-                  <p class="lang-name poppins-medium">Hindi</p>
+                  <p id="lang" data-id="lang-3" class="lang-name poppins-medium">Hindi</p>
                 </div>
               </div>
               <div class="bar-container">
                 <div class="progress-bar">
-                  <div style="--level: 100%"></div>
+                  <div id="lang-progress" data-id="lang-progress-1" style="--level: 100%"></div>
                 </div>
                 <div class="progress-bar">
-                  <div style="--level: 100%"></div>
+                  <div id="lang-progress" data-id="lang-progress-2" style="--level: 100%"></div>
                 </div>
                 <div class="progress-bar">
-                  <div style="--level: 80%"></div>
+                  <div id="lang-progress" data-id="lang-progress-3" style="--level: 80%"></div>
                 </div>
               </div>
             </div>
