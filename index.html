@@ -41,6 +41,22 @@
           <button disabled id="save-lang-progress" class="disabled">&check;</button>
         </div>
       </div>
+      <div class="job-date-popup">
+        <input placeholder="Введите дату" id="job-date-input" type="text">
+        <button disabled id="save-job-date" class="disabled">&check;</button>
+      </div>
+      <div class="job-title-popup">
+        <input placeholder="Введите должность" id="job-title-input" type="text">
+        <button disabled id="save-job-title" class="disabled">&check;</button>
+      </div>
+      <div class="job-type-popup">
+        <input placeholder="Введите название организации и тип занятости" id="job-type-input" type="text">
+        <button disabled id="save-job-type" class="disabled">&check;</button>
+      </div>
+      <div class="job-info-popup">
+        <input placeholder="Введите свои обязанности на этой работе" id="job-info-input" type="text">
+        <button disabled id="save-job-info" class="disabled">&check;</button>
+      </div>
     </div>
     <div class="app">
       <div class="cv">
@@ -84,48 +100,48 @@
             <h3 class="poppins-medium">Experience</h3>
             <div class="jobs-container">
               <div class="job">
-                <div class="date poppins-medium">Jun. 2023 - Present</div>
+                <div id="job-date" data-id="job-date-1" class="date poppins-medium">Jun. 2023 - Present</div>
                 <div class="info">
                   <div class="heading">
-                    <div class="title poppins-medium">Marketing Manager</div>
-                    <div class="type poppins-regular">Pankayam | Full-time</div>
+                    <div id="job-title" data-id="job-title-1" class="title poppins-medium">Marketing Manager</div>
+                    <div id="job-type" data-id="job-type-1" class="type poppins-regular">Pankayam | Full-time</div>
                   </div>
                   <div class="responsibilities poppins-regular">
                     <ul>
-                      <li>Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
-                      <li>SEO Content Creation for Blogs, Website, Social media</li>
+                      <li id="job-info" data-id="job-info-1-1">Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
+                      <li id="job-info" data-id="job-info-1-2">SEO Content Creation for Blogs, Website, Social media</li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div class="job">
-                <div class="date poppins-medium">2017 - Present</div>
+                <div id="job-date" data-id="job-date-2" class="date poppins-medium">2017 - Present</div>
                 <div class="info">
                   <div class="heading">
-                    <div class="title poppins-medium">Graphic / Web designer</div>
-                    <div class="type poppins-regular">Freelance</div>
+                    <div id="job-title" data-id="job-title-2" class="title poppins-medium">Graphic / Web designer</div>
+                    <div id="job-type" data-id="job-type-2" class="type poppins-regular">Freelance</div>
                   </div>
                   <div class="responsibilities poppins-regular">
                     <ul>
-                      <li>Development of internal projects from scratch, product design of brands </li>
-                      <li>Landing page, webapps and hybrid apps</li>
-                      <li>Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</li>
+                      <li id="job-info" data-id="job-info-2-1">Development of internal projects from scratch, product design of brands </li>
+                      <li id="job-info" data-id="job-info-2-2">Landing page, webapps and hybrid apps</li>
+                      <li id="job-info" data-id="job-info-2-3">Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div class="job">
-                <div class="date poppins-medium">Sep. 2021 - Jun. 2023</div>
+                <div id="job-date" data-id="job-date-3" class="date poppins-medium">Sep. 2021 - Jun. 2023</div>
                 <div class="info">
                   <div class="heading">
-                    <div class="title poppins-medium">Legal Assistant</div>
-                    <div class="type poppins-regular">Law Firm |  Intern</div>
+                    <div id="job-title" data-id="job-title-3" class="title poppins-medium">Legal Assistant</div>
+                    <div id="job-type" data-id="job-type-3"  class="type poppins-regular">Law Firm |  Intern</div>
                   </div>
                   <div class="responsibilities poppins-regular">
                     <ul>
-                      <li>Provide administrative support to lawyer and enhance office effectiveness</li>
-                      <li>Handle communication with clients, witnesses etc.</li>
-                      <li>repare case briefs and summarize depositions, interrogatories and testimony</li>
+                      <li id="job-info" data-id="job-info-3-1">Provide administrative support to lawyer and enhance office effectiveness</li>
+                      <li id="job-info" data-id="job-info-3-2">Handle communication with clients, witnesses etc.</li>
+                      <li id="job-info" data-id="job-info-3-3">repare case briefs and summarize depositions, interrogatories and testimony</li>
                     </ul>
                   </div>
                 </div>
@@ -138,30 +154,30 @@
               <div class="tool-block">
                 <p class="tool-header poppins-medium">design</p>
                 <div class="icons-container">
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:figma.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-2" style="background-image: url('https://api.iconify.design/simple-icons:adobephotoshop.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-3" style="background-image: url('https://api.iconify.design/simple-icons:adobeillustrator.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-4" style="background-image: url('https://api.iconify.design/simple-icons:adobepremierepro.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-5" style="background-image: url('https://api.iconify.design/simple-icons:notion.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-6" style="background-image: url('https://api.iconify.design/simple-icons:googlemeet.svg');" class="tool-icon"></div>
                 </div>
               </div>
               <div class="tool-block">
                 <p class="tool-header poppins-medium">no-code</p>
                 <div class="icons-container">
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:zapier.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:webflow.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:framer.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:wordpress.svg');" class="tool-icon"></div>
                 </div>
               </div>
               <div class="tool-block">
                 <p class="tool-header poppins-medium">artificial intelligence</p>
                 <div class="icons-container">
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
-                  <div class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:openai.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:microsoft365copilot.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:midjourney.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:.svg');" class="tool-icon"></div>
                 </div>
               </div>
             </div>
@@ -235,5 +251,13 @@
       </div>
     </div>
     <script type="module" src="./src/js/main.js"></script>
+    <script>
+      const i = setInterval(() => {
+        if (localStorage.getItem('savedData')) {
+          document.querySelector('.cv').style.filter = 'blur(0)'
+          clearInterval(i)
+        }
+      }, 100)
+    </script>
   </body>
 </html>

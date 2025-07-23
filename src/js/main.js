@@ -1,71 +1,57 @@
-import { handleChange, handleClick } from './handleChange.js'
+import {
+	handleAvatarChange,
+	handleChange,
+	handleClick,
+	handleInput,
+	handleLangProgressChange,
+	handleLangProgressInput,
+	handleSave,
+} from './handlers.js'
 
-const inputs = ['name', 'bio-heading', 'job', 'lang']
+const ids = [
+	'name',
+	'bio-heading',
+	'job',
+	'lang',
+	'job-date',
+	'job-title',
+	'job-type',
+	'job-info',
+]
 
-document.addEventListener('click', e => {
-	if (
-		e.target.classList.contains('popup') ||
-		e.target.parentNode.classList.contains('popup') ||
-		e.target.parentNode.parentNode.classList.contains('popup') ||
-		e.target.parentNode.parentNode.parentNode.classList.contains('popup')
-	) {
-		return
-	}
+let savedData = JSON.parse(localStorage.getItem('savedData'))
 
-	document.querySelector('.popup').classList.remove('active')
+document.addEventListener('click', handleClick)
 
-	if (!e.target.id) return
+document
+	.querySelector('#avatar-input')
+	.addEventListener('change', handleAvatarChange)
 
-	handleClick(e)
-})
+document
+	.querySelector('#lang-progress-input')
+	.addEventListener('input', handleLangProgressInput)
 
-document.querySelector('#avatar-input').addEventListener('change', e => {
-	const file = e.target.files[0]
+document
+	.querySelector(`#save-lang-progress`)
+	.addEventListener('click', handleLangProgressChange)
 
-	if (file) {
-		const imageURL = URL.createObjectURL(file)
-
-		handleChange('avatar', imageURL)
-	}
-})
-
-document.querySelector('#lang-progress-input').addEventListener('input', e => {
-	const slider = e.target
-
-	const value = slider.value * 10
-
-	slider.style.background = `linear-gradient(to right, #28d979 ${value}%, transparent ${value}%)`
+ids.forEach(inputId => {
+	document
+		.querySelector(`#${inputId}-input`)
+		.addEventListener('input', handleInput)
 
 	document
-		.querySelector(`#save-lang-progress`)
-		.classList.toggle('disabled', e.target.value === '0')
-
-	document.querySelector(`#save-lang-progress`).disabled =
-		e.target.value === '0'
+		.querySelector(`#save-${inputId}`)
+		.addEventListener('click', handleSave)
 })
 
-document.querySelector(`#save-lang-progress`).addEventListener('click', () => {
-	const newValue = document.querySelector(`#lang-progress-input`).value
+if (!savedData) {
+	localStorage.setItem('savedData', '{}')
+}
 
-	handleChange('lang-progress', newValue)
-})
+for (const key of Object.keys(savedData || {})) {
+	localStorage.setItem('currentDataId', key)
+	const id = key.match(/^[a-z]+(?:-[a-z]+)?/)[0]
 
-inputs.forEach(inputId => {
-	document.querySelector(`#${inputId}-input`).addEventListener('input', e => {
-		document
-			.querySelector(`#${inputId}-input`)
-			.classList.toggle('error', !e.target.value)
-
-		document
-			.querySelector(`#save-${inputId}`)
-			.classList.toggle('disabled', !e.target.value)
-
-		document.querySelector(`#save-${inputId}`).disabled = !e.target.value
-	})
-
-	document.querySelector(`#save-${inputId}`).addEventListener('click', () => {
-		const newValue = document.querySelector(`#${inputId}-input`).value
-
-		handleChange(inputId, newValue)
-	})
-})
+	handleChange(id, savedData[key])
+}

@@ -16,7 +16,7 @@ export default tseslint.config(
         ...globals.browser,
         ...globals.jest,
       },
-      ecmaVersion: 2015,
+      ecmaVersion: 2024,
       sourceType: 'module',
       parserOptions: {
         projectService: true,
