@@ -68,6 +68,11 @@ export const handleChange = (id, newData) => {
 			document.querySelector(`#save-${id}`).classList.add('disabled')
 			document.querySelector(`#save-${id}`).disabled = true
 			break
+		case 'card':
+			document
+				.querySelector(`[data-id=${localStorage.getItem('currentDataId')}]`)
+				.classList.toggle('favorite', newData)
+			break
 		default:
 			document.querySelector(
 				// eslint-disable-next-line prettier/prettier
@@ -171,4 +176,36 @@ export const handleToolChange = () => {
 	const iconUrl = `https://api.iconify.design/simple-icons:${value}.svg`
 
 	handleChange('tool', iconUrl)
+}
+
+export const handleDownload = () => {
+	const element = document.querySelector('.cv-wrapper')
+
+	const opt = {
+		margin: 0,
+		filename: 'resume.pdf',
+		image: { type: 'jpeg', quality: 0.97 },
+		html2canvas: {
+			scale: 3,
+			useCORS: true,
+		},
+		jsPDF: {
+			unit: 'px',
+			format: [595, 842],
+			orientation: 'portrait',
+		},
+	}
+
+	// eslint-disable-next-line no-undef
+	html2pdf().set(opt).from(element).save()
+}
+
+export const handleFavoriteCard = e => {
+	const id = e.target.parentNode.getAttribute('data-id')
+
+	localStorage.setItem('currentDataId', id)
+
+	const newValue = !JSON.parse(localStorage.getItem('savedData'))[id]
+
+	handleChange(id.split('-')[0], newValue)
 }

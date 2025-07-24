@@ -2,6 +2,8 @@ import {
 	handleAvatarChange,
 	handleChange,
 	handleClick,
+	handleDownload,
+	handleFavoriteCard,
 	handleInput,
 	handleLangProgressChange,
 	handleLangProgressInput,
@@ -59,8 +61,16 @@ document.querySelector('#tool-input').addEventListener('input', handleToolInput)
 
 document.querySelector('#save-tool').addEventListener('click', handleToolChange)
 
+document
+	.querySelector('.download-button')
+	.addEventListener('click', handleDownload)
+
+document
+	.querySelectorAll('.favorite-button')
+	.forEach(el => el.addEventListener('click', handleFavoriteCard))
+
 if (!savedData) {
-	localStorage.setItem('savedData', '{}')
+	localStorage.setItem('savedData', '{"card-1": true}')
 }
 
 for (const key of Object.keys(savedData || {})) {
@@ -69,24 +79,3 @@ for (const key of Object.keys(savedData || {})) {
 
 	handleChange(id, savedData[key])
 }
-
-document.querySelector('.download-button').addEventListener('click', () => {
-	const element = document.querySelector('.cv-wrapper')
-
-	const opt = {
-		margin: 0,
-		filename: 'resume.pdf',
-		image: { type: 'jpeg', quality: 0.98 },
-		html2canvas: {
-			scale: 3,
-			useCORS: true,
-		},
-		jsPDF: {
-			unit: 'px',
-			format: [595, 842],
-			orientation: 'portrait',
-		},
-	}
-
-	html2pdf().set(opt).from(element).save()
-})
