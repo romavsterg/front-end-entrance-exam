@@ -19,7 +19,12 @@ export const handleClick = e => {
 
 	const x = e.x
 
-	const y = el.id.startsWith('job-') ? e.y : el.offsetTop
+	const y =
+		el.id.startsWith('job-') ||
+		el.id.startsWith('tool') ||
+		el.id.startsWith('education-')
+			? e.pageY
+			: el.offsetTop
 
 	localStorage.setItem('currentDataId', el.getAttribute('data-id'))
 
@@ -55,13 +60,21 @@ export const handleChange = (id, newData) => {
 			document.querySelector(`#save-${id}`).classList.add('disabled')
 			document.querySelector(`#save-${id}`).disabled = true
 			break
+		case 'tool':
+			document.querySelector(
+				`[data-id=${localStorage.getItem('currentDataId')}]`,
+			).style.backgroundImage = `url(${newData})`
+			input.value = ''
+			document.querySelector(`#save-${id}`).classList.add('disabled')
+			document.querySelector(`#save-${id}`).disabled = true
+			break
 		default:
 			document.querySelector(
 				// eslint-disable-next-line prettier/prettier
 				`[data-id="${localStorage.getItem('currentDataId')}"]`
 			).textContent = newData
-
-			// console.log(newData)
+			document.querySelector(`#save-${id}`).disabled = true
+			document.querySelector(`#save-${id}`).classList.add('disabled')
 
 			input.value = ''
 			break
@@ -118,4 +131,44 @@ export const handleSave = e => {
 	const newValue = document.querySelector(`#${inputId}-input`).value
 
 	handleChange(inputId, newValue)
+}
+
+export const handleToolInput = async e => {
+	const input = e.target
+	const iconUrl = `https://api.iconify.design/simple-icons:${input.value}.svg`
+
+	try {
+		const res = await fetch(iconUrl)
+
+		const text = await res.text()
+
+		const err = text === 'Not found'
+
+		document.querySelector('.img-preview').classList.toggle('active', !err)
+		document.querySelector('.error').innerText = err ? 'Не найдено' : ''
+		document.querySelector('#save-tool').classList.toggle('disabled', err)
+		document.querySelector('#save-tool').disabled = err
+		document.querySelector('.img-preview').style.backgroundImage = err
+			? ''
+			: `url(${iconUrl})`
+	} catch {
+		document.querySelector('.img-preview').classList.remove('active')
+		document.querySelector('.error').innerText = 'Не найдено'
+		document.querySelector('#save-tool').classList.add('disabled')
+		document.querySelector('#save-tool').disabled = true
+		document.querySelector('.img-preview').style.backgroundImage = ''
+	}
+}
+
+export const handleToolChange = () => {
+	document.querySelector('.img-preview').classList.remove('active')
+	document.querySelector('.error').innerText = ''
+	document.querySelector('#save-tool').classList.add('disabled')
+	document.querySelector('#save-tool').disabled = true
+	document.querySelector('.img-preview').style.backgroundImage = ''
+
+	const value = document.querySelector('#tool-input').value
+	const iconUrl = `https://api.iconify.design/simple-icons:${value}.svg`
+
+	handleChange('tool', iconUrl)
 }

@@ -57,6 +57,44 @@
         <input placeholder="Введите свои обязанности на этой работе" id="job-info-input" type="text">
         <button disabled id="save-job-info" class="disabled">&check;</button>
       </div>
+      <div class="tool-popup">
+        <input placeholder="Название" id="tool-input" type="text">
+        <button disabled id="save-tool" class="disabled">&check;</button>
+        <div class="img-preview"></div>
+        <p class="error"></p>
+      </div>
+      <div class="tool-header-popup">
+        <input placeholder="Категория" id="tool-header-input" type="text">
+        <button disabled id="save-tool-header" class="disabled">&check;</button>
+      </div>
+      <div class="education-date-popup">
+        <input placeholder="Дата обучения" id="education-date-input" type="text">
+        <button disabled id="save-education-date" class="disabled">&check;</button>
+      </div>
+      <div class="education-title-popup">
+        <input placeholder="Название курса" id="education-title-input" type="text">
+        <button disabled id="save-education-title" class="disabled">&check;</button>
+      </div>
+      <div class="education-hashtags-popup">
+        <input placeholder="Тематика курса" id="education-hashtags-input" type="text">
+        <button disabled id="save-education-hashtags" class="disabled">&check;</button>
+      </div>
+      <div class="education-school-popup">
+        <input placeholder="Автор курса" id="education-school-input" type="text">
+        <button disabled id="save-education-school" class="disabled">&check;</button>
+      </div>
+      <div class="interest-popup">
+        <input placeholder="Интерес/хобби" id="interest-input" type="text">
+        <button disabled id="save-interest" class="disabled">&check;</button>
+      </div>
+      <div class="contact-popup">
+        <input placeholder="Интерес/хобби" id="contact-input" type="text">
+        <button disabled id="save-contact" class="disabled">&check;</button>
+      </div>
+      <div class="gmail-popup">
+        <input placeholder="Интерес/хобби" id="gmail-input" type="text">
+        <button disabled id="save-gmail" class="disabled">&check;</button>
+      </div>
     </div>
     <div class="app">
       <div class="cv">
@@ -152,7 +190,7 @@
             <h4 class="poppins-medium">Tools</h4>
             <div class="tool-blocks">
               <div class="tool-block">
-                <p class="tool-header poppins-medium">design</p>
+                <p id="tool-header" data-id="tool-header-1" class="tool-header poppins-medium">design</p>
                 <div class="icons-container">
                   <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:figma.svg');" class="tool-icon"></div>
                   <div id="tool" data-id="tool-2" style="background-image: url('https://api.iconify.design/simple-icons:adobephotoshop.svg');" class="tool-icon"></div>
@@ -163,21 +201,21 @@
                 </div>
               </div>
               <div class="tool-block">
-                <p class="tool-header poppins-medium">no-code</p>
+                <p id="tool-header" data-id="tool-header-2" class="tool-header poppins-medium">no-code</p>
                 <div class="icons-container">
-                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:zapier.svg');" class="tool-icon"></div>
-                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:webflow.svg');" class="tool-icon"></div>
-                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:framer.svg');" class="tool-icon"></div>
-                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:wordpress.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-7" style="background-image: url('https://api.iconify.design/simple-icons:zapier.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-8" style="background-image: url('https://api.iconify.design/simple-icons:webflow.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-9" style="background-image: url('https://api.iconify.design/simple-icons:framer.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-10" style="background-image: url('https://api.iconify.design/simple-icons:wordpress.svg');" class="tool-icon"></div>
                 </div>
               </div>
               <div class="tool-block">
-                <p class="tool-header poppins-medium">artificial intelligence</p>
+                <p id="tool-header" data-id="tool-header-3" class="tool-header poppins-medium">artificial intelligence</p>
                 <div class="icons-container">
-                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:openai.svg');" class="tool-icon"></div>
-                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:microsoft365copilot.svg');" class="tool-icon"></div>
-                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:midjourney.svg');" class="tool-icon"></div>
-                  <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-11" style="background-image: url('https://api.iconify.design/simple-icons:openai.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-12" style="background-image: url('https://api.iconify.design/simple-icons:openai.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-13" style="background-image: url('https://api.iconify.design/simple-icons:openai.svg');" class="tool-icon"></div>
+                  <div id="tool" data-id="tool-14" style="background-image: url('https://api.iconify.design/simple-icons:.svg');" class="tool-icon"></div>
                 </div>
               </div>
             </div>
@@ -189,36 +227,36 @@
               <h4 class="poppins-medium">Education</h4>
               <div class="education-cards">
                 <div class="education-card favorite">
-                  <p class="education-date poppins-medium">2023</p>
+                  <p id="education-date" data-id="education-date-1" class="education-date poppins-medium">2023</p>
                   <div class="education-title">
-                    <h5 class="poppins-medium">UI/UX</h5>
-                    <p class="hashtags poppins-regular">
+                    <h5 id="education-title" data-id="education-title-1" class="poppins-medium">UI/UX</h5>
+                    <p id="education-hashtags" data-id="education-hashtags-1" class="hashtags poppins-regular">
                       #UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux
                     </p>
                   </div>
-                  <p class="school poppins-regular">Coursea</p>
+                  <p id="education-school" data-id="education-school-1" class="school poppins-regular">Coursea</p>
                   <button class="favorite-button"></button>
                 </div>
                 <div class="education-card">
-                  <p class="education-date poppins-medium">2017 - 2022</p>
+                  <p id="education-date" data-id="education-date-2" class="education-date poppins-medium">2017 - 2022</p>
                   <div class="education-title">
-                    <h5 class="poppins-medium">Law</h5>
-                    <p class="hashtags poppins-regular">
+                    <h5 id="education-title" data-id="education-title-1" class="poppins-medium">Law</h5>
+                    <p id="education-hashtags" data-id="education-hashtags-2" class="hashtags poppins-regular">
                       #law #legalStudies #contracts #internationalLaws
                     </p>
                   </div>
-                  <p class="school poppins-regular">University of Kerala</p>
+                  <p id="education-school" data-id="education-school-2" class="school poppins-regular">University of Kerala</p>
                   <button class="favorite-button"></button>
                 </div>
                 <div class="education-card">
-                  <p class="education-date poppins-medium">2017</p>
+                  <p id="education-date" data-id="education-date-3" class="education-date poppins-medium">2017</p>
                   <div class="education-title">
-                    <h5 class="poppins-medium">Graphic design</h5>
-                    <p class="hashtags poppins-regular">
+                    <h5 id="education-title" data-id="education-title-1" class="poppins-medium">Graphic design</h5>
+                    <p id="education-hashtags" data-id="education-hashtags-3" class="hashtags poppins-regular">
                       #branding #web #illustration #adobe
                     </p>
                   </div>
-                  <p class="school poppins-regular">Coursea</p>
+                  <p id="education-school" data-id="education-school-3" class="school poppins-regular">Coursea</p>
                   <button class="favorite-button"></button>
                 </div>
               </div>
@@ -228,23 +266,23 @@
             <div class="interests">
               <h4 class="poppins-medium">Interests</h4>
               <div class="interests-container">
-                <span>branding</span>
-                <span>design</span>
-                <span>photography</span>
-                <span>artificial intelligence</span>
-                <span>illustration</span>
-                <span>typography</span>
-                <span>social networks</span>
-                <span>research</span>
-                <span>drone pilot</span>
-                <span>games</span>
+                <span id="interest" data-id="interest-1">branding</span>
+                <span id="interest" data-id="interest-2">design</span>
+                <span id="interest" data-id="interest-3">photography</span>
+                <span id="interest" data-id="interest-4">artificial intelligence</span>
+                <span id="interest" data-id="interest-5">illustration</span>
+                <span id="interest" data-id="interest-6">typography</span>
+                <span id="interest" data-id="interest-7">social networks</span>
+                <span id="interest" data-id="interest-8">research</span>
+                <span id="interest" data-id="interest-9">drone pilot</span>
+                <span id="interest" data-id="interest-10">games</span>
               </div>
             </div>
             <div class="contacts">
               <div class="contact-heading">
-                <p class="poppins-regular">Let´s chat! I´m ready to work on exciting projects</p>
+                <p id="contact" data-id="contact" class="poppins-regular">Let´s chat! I´m ready to work on exciting projects</p>
               </div>
-              <p class="gmail poppins-regular">srkarthik.designscape@gmail.com</p>
+              <p id="gmail" data-id="gmail" class="gmail poppins-regular">srkarthik.designscape@gmail.com</p>
             </div>
           </div>
         </div>

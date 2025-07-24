@@ -3,6 +3,7 @@
 }
 
 .popup {
+  min-width: 120px;
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -148,6 +149,48 @@
       button {
         margin-bottom: 2px;
       }
+    }
+  }
+
+  .tool-popup {
+    * {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    button, .img-preview {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .img-preview {
+      margin-top: 4px;
+      height: 0;
+      background-size: contain;
+
+      transition: .3s;
+      -webkit-transition: .3s;
+      -moz-transition: .3s;
+      -ms-transition: .3s;
+      -o-transition: .3s;
+    }
+
+    .img-preview.active {
+      height: 36px;
+      width: 36px;
+    }
+  }
+
+  .tool-header-popup.active {
+    display: flex !important;
+
+    justify-content: space-between;
+
+    input {
+      width: 70px;
     }
   }
 }

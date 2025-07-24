@@ -6,6 +6,8 @@ import {
 	handleLangProgressChange,
 	handleLangProgressInput,
 	handleSave,
+	handleToolChange,
+	handleToolInput,
 } from './handlers.js'
 
 const ids = [
@@ -17,6 +19,14 @@ const ids = [
 	'job-title',
 	'job-type',
 	'job-info',
+	'tool-header',
+	'education-date',
+	'education-title',
+	'education-hashtags',
+	'education-school',
+	'interest',
+	'contact',
+	'gmail',
 ]
 
 let savedData = JSON.parse(localStorage.getItem('savedData'))
@@ -44,6 +54,10 @@ ids.forEach(inputId => {
 		.querySelector(`#save-${inputId}`)
 		.addEventListener('click', handleSave)
 })
+
+document.querySelector('#tool-input').addEventListener('input', handleToolInput)
+
+document.querySelector('#save-tool').addEventListener('click', handleToolChange)
 
 if (!savedData) {
 	localStorage.setItem('savedData', '{}')
