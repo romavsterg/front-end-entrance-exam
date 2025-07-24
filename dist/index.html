@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-BAa5xqlR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BO3XB_dG.css">
+  </head>
+  <body>
+    <div class="popup">
+      <div class="avatar-popup">
+        <h2>Выберите свой аватар</h2>
+        <label for="avatar-input">Выбрать файл</label>
+        <input id="avatar-input" type="file"/>
+      </div>
+      <div class="name-popup">
+        <input placeholder="Введите имя" id="name-input" type="text">
+        <button disabled id="save-name" class="disabled">&check;</button>
+      </div>
+      <div class="job-popup">
+        <input placeholder="Введите должность" id="job-input" type="text">
+        <button disabled id="save-job" class="disabled">&check;</button>
+      </div>
+      <div class="bio-heading-popup">
+        <input placeholder="Произвольный текст" id="bio-heading-input" type="text">
+        <button disabled id="save-bio-heading" class="disabled">&check;</button>
+      </div>
+      <div class="lang-popup">
+        <input placeholder="Название языка" id="lang-input" type="text">
+        <button disabled id="save-lang" class="disabled">&check;</button>
+      </div>
+      <div class="lang-progress-popup">
+        <p>Уровень Владения языком(от 1 до 10)</p>
+        <div>
+          <input type="range" min="0" max="10" id="lang-progress-input">
+          <button disabled id="save-lang-progress" class="disabled">&check;</button>
+        </div>
+      </div>
+      <div class="job-date-popup">
+        <input placeholder="Введите дату" id="job-date-input" type="text">
+        <button disabled id="save-job-date" class="disabled">&check;</button>
+      </div>
+      <div class="job-title-popup">
+        <input placeholder="Введите должность" id="job-title-input" type="text">
+        <button disabled id="save-job-title" class="disabled">&check;</button>
+      </div>
+      <div class="job-type-popup">
+        <input placeholder="Введите название организации и тип занятости" id="job-type-input" type="text">
+        <button disabled id="save-job-type" class="disabled">&check;</button>
+      </div>
+      <div class="job-info-popup">
+        <input placeholder="Введите свои обязанности на этой работе" id="job-info-input" type="text">
+        <button disabled id="save-job-info" class="disabled">&check;</button>
+      </div>
+      <div class="tool-popup">
+        <input placeholder="Название" id="tool-input" type="text">
+        <button disabled id="save-tool" class="disabled">&check;</button>
+        <div class="img-preview"></div>
+        <p class="error"></p>
+      </div>
+      <div class="tool-header-popup">
+        <input placeholder="Категория" id="tool-header-input" type="text">
+        <button disabled id="save-tool-header" class="disabled">&check;</button>
+      </div>
+      <div class="education-date-popup">
+        <input placeholder="Дата обучения" id="education-date-input" type="text">
+        <button disabled id="save-education-date" class="disabled">&check;</button>
+      </div>
+      <div class="education-title-popup">
+        <input placeholder="Название курса" id="education-title-input" type="text">
+        <button disabled id="save-education-title" class="disabled">&check;</button>
+      </div>
+      <div class="education-hashtags-popup">
+        <input placeholder="Тематика курса" id="education-hashtags-input" type="text">
+        <button disabled id="save-education-hashtags" class="disabled">&check;</button>
+      </div>
+      <div class="education-school-popup">
+        <input placeholder="Автор курса" id="education-school-input" type="text">
+        <button disabled id="save-education-school" class="disabled">&check;</button>
+      </div>
+      <div class="interest-popup">
+        <input placeholder="Интерес/хобби" id="interest-input" type="text">
+        <button disabled id="save-interest" class="disabled">&check;</button>
+      </div>
+      <div class="contact-popup">
+        <input placeholder="Интерес/хобби" id="contact-input" type="text">
+        <button disabled id="save-contact" class="disabled">&check;</button>
+      </div>
+      <div class="gmail-popup">
+        <input placeholder="Интерес/хобби" id="gmail-input" type="text">
+        <button disabled id="save-gmail" class="disabled">&check;</button>
+      </div>
+    </div>
+    <div class="app">
+      <div class="cv">
+        <div class="cv-wrapper">
+          <div class="top">
+            <div id="avatar" data-id="avatar" class="avatar"></div>
+            <div class="bio">
+              <p id="bio-heading" data-id="bio-heading" class="heading poppins-medium">Hello 👋🏻 I’m</p>
+              <h1 id="name" data-id="name" class="name poppins-semibold">Karthik SR</h1>
+              <p id="job" data-id="job" class="job poppins-medium">UX/UI Designer</p>
+            </div>
+            <div class="langs">
+              <h2 class="poppins-medium">Languages</h2>
+              <div class="wrapper">
+                <div class="langs-container">
+                  <div class="lang">
+                    <p id="lang" data-id="lang-1" class="lang-name poppins-medium">English</p>
+                  </div>
+                  <div class="lang">
+                    <p id="lang" data-id="lang-2" class="lang-name poppins-medium">Malayalam</p>
+                  </div>
+                  <div class="lang">
+                    <p id="lang" data-id="lang-3" class="lang-name poppins-medium">Hindi</p>
+                  </div>
+                </div>
+                <div class="bar-container">
+                  <div class="progress-bar">
+                    <div id="lang-progress" data-id="lang-progress-1" style="--level: 100%"></div>
+                  </div>
+                  <div class="progress-bar">
+                    <div id="lang-progress" data-id="lang-progress-2" style="--level: 100%"></div>
+                  </div>
+                  <div class="progress-bar">
+                    <div id="lang-progress" data-id="lang-progress-3" style="--level: 80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="middle">
+            <div class="experience">
+              <h3 class="poppins-medium">Experience</h3>
+              <div class="jobs-container">
+                <div class="job">
+                  <div id="job-date" data-id="job-date-1" class="date poppins-medium">Jun. 2023 - Present</div>
+                  <div class="info">
+                    <div class="heading">
+                      <div id="job-title" data-id="job-title-1" class="title poppins-medium">Marketing Manager</div>
+                      <div id="job-type" data-id="job-type-1" class="type poppins-regular">Pankayam | Full-time</div>
+                    </div>
+                    <div class="responsibilities poppins-regular">
+                      <ul>
+                        <li id="job-info" data-id="job-info-1-1">Strategy development and planning of campaigns that promote the business and generate genuine traffic</li>
+                        <li id="job-info" data-id="job-info-1-2">SEO Content Creation for Blogs, Website, Social media</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="job">
+                  <div id="job-date" data-id="job-date-2" class="date poppins-medium">2017 - Present</div>
+                  <div class="info">
+                    <div class="heading">
+                      <div id="job-title" data-id="job-title-2" class="title poppins-medium">Graphic / Web designer</div>
+                      <div id="job-type" data-id="job-type-2" class="type poppins-regular">Freelance</div>
+                    </div>
+                    <div class="responsibilities poppins-regular">
+                      <ul>
+                        <li id="job-info" data-id="job-info-2-1">Development of internal projects from scratch, product design of brands </li>
+                        <li id="job-info" data-id="job-info-2-2">Landing page, webapps and hybrid apps</li>
+                        <li id="job-info" data-id="job-info-2-3">Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="job">
+                  <div id="job-date" data-id="job-date-3" class="date poppins-medium">Sep. 2021 - Jun. 2023</div>
+                  <div class="info">
+                    <div class="heading">
+                      <div id="job-title" data-id="job-title-3" class="title poppins-medium">Legal Assistant</div>
+                      <div id="job-type" data-id="job-type-3"  class="type poppins-regular">Law Firm |  Intern</div>
+                    </div>
+                    <div class="responsibilities poppins-regular">
+                      <ul>
+                        <li id="job-info" data-id="job-info-3-1">Provide administrative support to lawyer and enhance office effectiveness</li>
+                        <li id="job-info" data-id="job-info-3-2">Handle communication with clients, witnesses etc.</li>
+                        <li id="job-info" data-id="job-info-3-3">repare case briefs and summarize depositions, interrogatories and testimony</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tools">
+              <h4 class="poppins-medium">Tools</h4>
+              <div class="tool-blocks">
+                <div class="tool-block">
+                  <p id="tool-header" data-id="tool-header-1" class="tool-header poppins-medium">design</p>
+                  <div class="icons-container">
+                    <div id="tool" data-id="tool-1" style="background-image: url('https://api.iconify.design/simple-icons:figma.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-2" style="background-image: url('https://api.iconify.design/simple-icons:adobephotoshop.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-3" style="background-image: url('https://api.iconify.design/simple-icons:adobeillustrator.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-4" style="background-image: url('https://api.iconify.design/simple-icons:adobepremierepro.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-5" style="background-image: url('https://api.iconify.design/simple-icons:notion.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-6" style="background-image: url('https://api.iconify.design/simple-icons:googlemeet.svg');" class="tool-icon"></div>
+                  </div>
+                </div>
+                <div class="tool-block">
+                  <p id="tool-header" data-id="tool-header-2" class="tool-header poppins-medium">no-code</p>
+                  <div class="icons-container">
+                    <div id="tool" data-id="tool-7" style="background-image: url('https://api.iconify.design/simple-icons:zapier.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-8" style="background-image: url('https://api.iconify.design/simple-icons:webflow.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-9" style="background-image: url('https://api.iconify.design/simple-icons:framer.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-10" style="background-image: url('https://api.iconify.design/simple-icons:wordpress.svg');" class="tool-icon"></div>
+                  </div>
+                </div>
+                <div class="tool-block">
+                  <p id="tool-header" data-id="tool-header-3" class="tool-header poppins-medium">artificial intelligence</p>
+                  <div class="icons-container">
+                    <div id="tool" data-id="tool-11" style="background-image: url('https://api.iconify.design/simple-icons:openai.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-12" style="background-image: url('https://api.iconify.design/simple-icons:openai.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-13" style="background-image: url('https://api.iconify.design/simple-icons:openai.svg');" class="tool-icon"></div>
+                    <div id="tool" data-id="tool-14" class="tool-icon"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="left-block">
+              <div class="education">
+                <h4 class="poppins-medium">Education</h4>
+                <div class="education-cards">
+                  <div data-id="card-1" class="education-card favorite">
+                    <p id="education-date" data-id="education-date-1" class="education-date poppins-medium">2023</p>
+                    <div class="education-title">
+                      <h5 id="education-title" data-id="education-title-1" class="poppins-medium">UI/UX</h5>
+                      <p id="education-hashtags" data-id="education-hashtags-1" class="hashtags poppins-regular">
+                        #UX #UI #research #DesignSystem #Ui #wireframing #figma #Ux
+                      </p>
+                    </div>
+                    <p id="education-school" data-id="education-school-1" class="school poppins-regular">Coursea</p>
+                    <button class="favorite-button"></button>
+                  </div>
+                  <div data-id="card-2" class="education-card">
+                    <p id="education-date" data-id="education-date-2" class="education-date poppins-medium">2017 - 2022</p>
+                    <div class="education-title">
+                      <h5 id="education-title" data-id="education-title-1" class="poppins-medium">Law</h5>
+                      <p id="education-hashtags" data-id="education-hashtags-2" class="hashtags poppins-regular">
+                        #law #legalStudies #contracts #internationalLaws
+                      </p>
+                    </div>
+                    <p id="education-school" data-id="education-school-2" class="school poppins-regular">University of Kerala</p>
+                    <button class="favorite-button"></button>
+                  </div>
+                  <div data-id="card-3" class="education-card">
+                    <p id="education-date" data-id="education-date-3" class="education-date poppins-medium">2017</p>
+                    <div class="education-title">
+                      <h5 id="education-title" data-id="education-title-1" class="poppins-medium">Graphic design</h5>
+                      <p id="education-hashtags" data-id="education-hashtags-3" class="hashtags poppins-regular">
+                        #branding #web #illustration #adobe
+                      </p>
+                    </div>
+                    <p id="education-school" data-id="education-school-3" class="school poppins-regular">Coursea</p>
+                    <button class="favorite-button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right-block">
+              <div class="interests">
+                <h4 class="poppins-medium">Interests</h4>
+                <div class="interests-container">
+                  <span id="interest" data-id="interest-1">branding</span>
+                  <span id="interest" data-id="interest-2">design</span>
+                  <span id="interest" data-id="interest-3">photography</span>
+                  <span id="interest" data-id="interest-4">artificial intelligence</span>
+                  <span id="interest" data-id="interest-5">illustration</span>
+                  <span id="interest" data-id="interest-6">typography</span>
+                  <span id="interest" data-id="interest-7">social networks</span>
+                  <span id="interest" data-id="interest-8">research</span>
+                  <span id="interest" data-id="interest-9">drone pilot</span>
+                  <span id="interest" data-id="interest-10">games</span>
+                </div>
+              </div>
+              <div class="contacts">
+                <div class="contact-heading">
+                  <p id="contact" data-id="contact" class="poppins-regular">Let´s chat! I´m ready to work on exciting projects</p>
+                </div>
+                <p id="gmail" data-id="gmail" class="gmail poppins-regular">srkarthik.designscape@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="download-button">Скачать PDF</button>
+    </div>
+    <script>
+      const i = setInterval(() => {
+        if (localStorage.getItem('savedData')) {
+          document.querySelector('.cv-wrapper').style.filter = 'blur(0)'
+          clearInterval(i)
+        }
+      }, 100)
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </body>
+</html>
