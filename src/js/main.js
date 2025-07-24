@@ -69,3 +69,24 @@ for (const key of Object.keys(savedData || {})) {
 
 	handleChange(id, savedData[key])
 }
+
+document.querySelector('.download-button').addEventListener('click', () => {
+	const element = document.querySelector('.cv-wrapper')
+
+	const opt = {
+		margin: 0,
+		filename: 'resume.pdf',
+		image: { type: 'jpeg', quality: 0.98 },
+		html2canvas: {
+			scale: 3,
+			useCORS: true,
+		},
+		jsPDF: {
+			unit: 'px',
+			format: [595, 842],
+			orientation: 'portrait',
+		},
+	}
+
+	html2pdf().set(opt).from(element).save()
+})
